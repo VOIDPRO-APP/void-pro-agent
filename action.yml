@@ -1,0 +1,9 @@
+name: VOID PRO - Agente
+description: Executa uma tarefa autorizada da VOID PRO sem armazenar chaves de IA.
+inputs:
+  task-id:
+    description: Identificador da tarefa VOID PRO
+    required: true
+runs:
+  using: node24
+  main: runner.mjs

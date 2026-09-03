@@ -1,0 +1,9 @@
+{
+  "name": "void-pro-agent",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Executor de tarefas VOID PRO para GitHub Actions, sem credenciais de IA.",
+  "scripts": { "test": "node --test test/*.test.mjs" },
+  "engines": { "node": ">=22" }
+}
