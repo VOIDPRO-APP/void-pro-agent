@@ -1,0 +1,17 @@
+# VOID PRO: verificação não faturável do transporte do executor.
+name: VOID PRO - Verificar executor
+on:
+  workflow_dispatch:
+    inputs:
+      task_id:
+        description: Identificador da verificação autorizada no servidor
+        required: true
+        type: string
+permissions:
+  contents: read
+  id-token: write
+jobs:
+  verify:
+    uses: VOIDPRO-APP/void-pro-agent/.github/workflows/void-pro-execute.yml@30dd23acb3eafe8623b04b3fc9f8c01ce982e1ac
+    with:
+      task-id: ${{ inputs.task_id }}
