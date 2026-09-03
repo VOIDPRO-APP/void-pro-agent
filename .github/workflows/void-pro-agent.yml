@@ -1,4 +1,4 @@
-# VOID PRO: verificação não faturável do transporte do executor.
+# VOID PRO: verificacao tecnica explicitamente autorizada no servidor.
 name: VOID PRO - Verificar executor
 on:
   workflow_dispatch:
