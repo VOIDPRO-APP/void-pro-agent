@@ -1,0 +1,21 @@
+name: VOID PRO - Executor
+on:
+  workflow_call:
+    inputs:
+      task-id:
+        description: Identificador seguro da tarefa VOID PRO
+        required: true
+        type: string
+permissions:
+  id-token: write
+  contents: read
+jobs:
+  execute:
+    name: VOID PRO - Editando seu projeto
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: VOID PRO - Executar tarefa autorizada
+        uses: VOIDPRO-APP/void-pro-agent@9851e31df00521cdb638ce8d5b5e8e3024704873
+        with:
+          task-id: ${{ inputs.task-id }}
